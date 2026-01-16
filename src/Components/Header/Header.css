@@ -1,0 +1,114 @@
+.cine-header {
+  height: 65px;
+  width: 100%;
+  background: linear-gradient(135deg, #050b18, #0b1530);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 0 20px 0 90px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* left */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo {
+  width: 76px;
+}
+
+.site-title {
+  margin: 0;
+}
+
+/* center search */
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header-search {
+  width: 60%;
+  max-width: 450px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.header-search::placeholder {
+  color: #c7c7c7;
+}
+
+/* right section */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+/* ----------------------------- */
+/*      RESPONSIVE DESIGN        */
+/* ----------------------------- */
+
+/* tablet */
+@media (max-width: 992px) {
+  .header-search {
+    width: 75%;
+  }
+
+  .user-name {
+    display: none;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .cine-header {
+    padding-left: 20px;
+  }
+
+  .header-center {
+    display: none; /* hide search on small screens */
+  }
+
+  .site-title {
+    font-size: 1rem;
+  }
+}
+
+/* very small phones */
+@media (max-width: 480px) {
+  .header-right i {
+    font-size: 14px;
+  }
+
+  .user-box {
+    padding: 4px 6px;
+  }
+}

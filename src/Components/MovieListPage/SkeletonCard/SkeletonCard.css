@@ -1,0 +1,18 @@
+.movie-skeleton {
+  height: 130px;
+  width: 257px;
+  border-radius: 12px;
+  background: linear-gradient(
+    90deg,
+    #222 25%,
+    #333 37%,
+    #222 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}

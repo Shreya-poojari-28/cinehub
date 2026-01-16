@@ -1,0 +1,36 @@
+.dashboard-container {
+    padding: 20px;
+}
+
+/* Horizontal movie row */
+.cards-wrapper {
+    display: flex;
+    flex-wrap: nowrap;          /* ✅ keep in one row */
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar by default */
+.cards-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+/* Subtle scrollbar (premium look) */
+.cards-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+}
+
+.cards-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.show-all-btn {
+    color: aliceblue;
+}
+
+.show-all-btn:hover {
+    color: #ff4757;
+}

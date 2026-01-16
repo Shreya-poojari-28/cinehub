@@ -1,0 +1,144 @@
+.sidebar {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  width: 240px;
+  height: calc(100vh - 65px); 
+  background: linear-gradient(180deg, #060b18, #091123);
+  color: white;
+  transition: width 0.3s ease;
+  padding-top: 60px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+/* toggle button */
+.sidebar-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  background: #ff4757;
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.sidebar-brand {
+  text-align: center;
+  padding: 10px;
+}
+
+.logo {
+  width: 60%;
+  transition: 0.3s;
+}
+
+/* tagline */
+.sidebar-tagline {
+  font-size: 0.8rem;
+  color: #c7c7c7;
+  margin-top: 5px;
+}
+
+/* menu */
+.sidebar-menu {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-menu a {
+  color: #e6e6e6;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s;
+}
+
+.sidebar-menu a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+}
+
+/* when collapsed → center icons */
+.sidebar.collapsed .sidebar-menu a {
+  justify-content: center;
+}
+
+/* when collapsed → hide text spacing */
+.sidebar.collapsed .sidebar-menu span {
+  display: none;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar.collapsed + .layout-content {
+  margin-left: 70px;
+}
+
+/* main sidebar container */
+.sidebar {
+  position: fixed;
+  top: 65px;
+  left: -260px;             /* hidden by default */
+  width: 240px;
+  height: calc(100vh - 65px);
+  background: linear-gradient(180deg, #060b18, #091123);
+  color: white;
+  transition: left .3s ease;
+  padding-top: 60px;
+  overflow-y: auto;         /* scroll only inside sidebar */
+  z-index: 1001;
+}
+
+/* when open slide in like GitHub */
+.sidebar.open {
+  left: 0;
+}
+
+/* overlay that blocks interaction with rest of page */
+.sidebar-overlay {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 65px);
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+}
+
+/* toggle button fixed at top */
+.sidebar-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100;
+  background: #ff4757;
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* disable clicking page when sidebar is open */
+body.sidebar-open .layout-content {
+  pointer-events: none;
+}
+
+/* keep your previous styles below… */
