@@ -6,6 +6,8 @@ const initialState = {
   UpcomingList: null,
   NowPlayingList: null,
   AllMoviesList: null,
+  MovieDetails: null,
+  movieDetailsLoading: false,
 };
 
 export const reusableSlice = createSlice({
@@ -57,6 +59,18 @@ export const reusableSlice = createSlice({
         state.AllMoviesList.page = action.payload.page;
       }
     },
+    setMovieDetailData: (state, action) => {
+      state.MovieDetails = action.payload;
+      state.movieDetailsLoading = false;
+    },
+    setMovieDetailsLoading: (state) => {
+      state.movieDetailsLoading = true;
+      state.MovieDetails = null; 
+    },
+    clearMovieDetails: (state) => {
+      state.MovieDetails = null;
+      state.movieDetailsLoading = false;
+    },
   },
 });
 
@@ -65,6 +79,9 @@ export const {
   setTopRatedList,
   setUpcomingList,
   setNowPlayingList,
+  setMovieDetailData,
+  setMovieDetailsLoading,
+  clearMovieDetails,
   setAllMoviesList,
 } = reusableSlice.actions;
 

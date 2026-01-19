@@ -1,0 +1,105 @@
+.movie-details {
+  background: #0b0f19;
+  color: #fff;
+}
+
+/* HERO */
+.movie-hero {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(11, 15, 25, 0.95),
+    rgba(11, 15, 25, 0.4)
+  );
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  gap: 40px;
+  padding: 0 80px;
+}
+
+.poster {
+  width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+.info h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.meta span {
+  margin-right: 15px;
+  color: #9ca3af;
+}
+
+.genres span {
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #1f2937;
+  font-size: 14px;
+}
+
+.overview {
+  max-width: 600px;
+  line-height: 1.7;
+  margin: 20px 0;
+  color: #d1d5db;
+}
+
+.trailer-btn {
+  background: #e50914;
+  padding: 14px 28px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 80px;
+}
+
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 25px;
+}
+
+.cast-card {
+  text-align: center;
+}
+
+.cast-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.cast-card h4 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.cast-card p {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.info-grid {
+  display: flex;
+  gap: 80px;
+}

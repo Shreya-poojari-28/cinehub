@@ -8,6 +8,10 @@
   color: red;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .app-wrapper {
   min-height: 100vh;
   display: flex;

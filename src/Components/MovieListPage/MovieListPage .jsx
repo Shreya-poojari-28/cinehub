@@ -94,7 +94,7 @@ const MovieListPage = () => {
       {(loading && page <= 500) && (
 
         <div className='d-flex gap-4 flex-wrap justify-content-center'>
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+          {Array.from({ length: 8 }).map((item) => (
             <SkeletonCard key={item} />
 
           ))}
