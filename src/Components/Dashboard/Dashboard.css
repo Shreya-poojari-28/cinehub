@@ -5,11 +5,13 @@
 /* Horizontal movie row */
 .cards-wrapper {
     display: flex;
-    flex-wrap: nowrap;          /* ✅ keep in one row */
+    flex-wrap: nowrap;
+    /* ✅ keep in one row */
     gap: 16px;
     overflow-x: auto;
     padding-bottom: 10px;
     scroll-behavior: smooth;
+    padding-left: 5%;
 }
 
 /* Hide scrollbar by default */
@@ -33,4 +35,9 @@
 
 .show-all-btn:hover {
     color: #ff4757;
+}
+
+h2 {
+    padding-left: 5%;
+    font-weight: 700;
 }

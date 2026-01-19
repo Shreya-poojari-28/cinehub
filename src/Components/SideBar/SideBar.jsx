@@ -26,7 +26,7 @@ const Sidebar = () => {
           {open && <p className="sidebar-tagline">Your Ultimate Movie Space</p>}
         </div>
 
-        <nav className="sidebar-menu">
+        <nav className="sidebar-menu"  onClick={() => setOpen(!open)}>
           <NavLink to="/dashboard"><i className="fa-solid fa-chart-line"></i>{open && <span>Dashboard</span>}</NavLink>
           <NavLink to="/movies"><i className="fa-solid fa-film"></i>{open && <span>Movies</span>}</NavLink>
           <NavLink to="/users"><i className="fa-solid fa-users"></i>{open && <span>Users</span>}</NavLink>

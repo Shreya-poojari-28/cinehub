@@ -79,7 +79,7 @@ const MovieDetails = () => {
                   className="trailer-btn"
                   onClick={() => setShowTrailer(true)}
                 >
-                  ▶ Watch Trailer
+                  <i class="fa-solid fa-play"></i> Watch Trailer
                 </button>
               )}
             </div>

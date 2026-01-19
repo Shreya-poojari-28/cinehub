@@ -85,7 +85,7 @@ const MovieListPage = () => {
 
       <div className="d-flex flex-wrap justify-content-center">
         {movies.map(movie => (
-          <div key={movie.id} className="">
+          <div key={movie.id}>
             <MovieCard movie={movie} />
           </div>
         ))}

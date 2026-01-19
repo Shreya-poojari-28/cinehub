@@ -1,18 +1,26 @@
+/* =========================
+   BASE
+   ========================= */
+
 .movie-details {
   background: #0b0f19;
-  color: #fff;
+  color: #ffffff;
 }
 
-/* HERO */
+/* =========================
+   HERO
+   ========================= */
+
 .movie-hero {
-  height: 90vh;
+  min-height: 90vh;
+  height: auto;
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
 .overlay {
-  height: 100%;
+  min-height: inherit;
   background: linear-gradient(
     to right,
     rgba(11, 15, 25, 0.95),
@@ -26,27 +34,51 @@
   display: flex;
   gap: 40px;
   padding: 0 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
+/* =========================
+   POSTER
+   ========================= */
+
 .poster {
+  display: block;
   width: 300px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+  flex-shrink: 0;
 }
+
+/* =========================
+   INFO
+   ========================= */
 
 .info h1 {
   font-size: 48px;
   margin-bottom: 10px;
 }
 
+.meta {
+  margin-bottom: 10px;
+}
+
 .meta span {
   margin-right: 15px;
   color: #9ca3af;
+  font-size: 14px;
+}
+
+.genres {
+  margin-top: 10px;
 }
 
 .genres span {
   display: inline-block;
-  margin: 10px 10px 10px 0;
+  margin: 6px 10px 6px 0;
   padding: 6px 14px;
   border-radius: 20px;
   background: #1f2937;
@@ -61,18 +93,31 @@
 }
 
 .trailer-btn {
+  display: inline-block;
   background: #e50914;
   padding: 14px 28px;
   border-radius: 30px;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+   ========================= */
+
 .section {
   padding: 60px 80px;
 }
+
+.info-grid {
+  display: flex;
+  gap: 80px;
+}
+
+/* =========================
+   CAST
+   ========================= */
 
 .cast-grid {
   display: grid;
@@ -86,6 +131,8 @@
 
 .cast-card img {
   width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
   border-radius: 12px;
 }
 
@@ -99,7 +146,119 @@
   font-size: 14px;
 }
 
-.info-grid {
-  display: flex;
-  gap: 80px;
+/* =========================
+   TABLET (≤ 1024px)
+   ========================= */
+
+@media (max-width: 1024px) {
+  .hero-content {
+    gap: 28px;
+    padding: 0 40px;
+  }
+
+  .poster {
+    width: 240px;
+  }
+
+  .info h1 {
+    font-size: 38px;
+  }
+
+  .section {
+    padding: 50px 40px;
+  }
+
+  .info-grid {
+    gap: 40px;
+  }
+}
+
+/* =========================
+   MOBILE (≤ 768px)
+   ========================= */
+
+@media (max-width: 768px) {
+  .movie-hero {
+    min-height: 100vh;
+  }
+
+  .overlay {
+    align-items: flex-start;
+    background: linear-gradient(
+      to bottom,
+      rgba(11, 15, 25, 0.98) 0%,
+      rgba(11, 15, 25, 0.9) 40%,
+      rgba(11, 15, 25, 0.7) 100%
+    );
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px 20px;
+    gap: 20px;
+  }
+
+  .poster {
+    width: 200px;
+  }
+
+  .info h1 {
+    font-size: 30px;
+  }
+
+  .meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .genres {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .overview {
+    max-width: 100%;
+    font-size: 15px;
+  }
+
+  .section {
+    padding: 40px 20px;
+  }
+
+  .info-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE (≤ 480px)
+   ========================= */
+
+@media (max-width: 480px) {
+  .poster {
+    width: 170px;
+  }
+
+  .info h1 {
+    font-size: 26px;
+  }
+
+  .meta span {
+    font-size: 13px;
+  }
+
+  .genres span {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  .cast-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

@@ -5,7 +5,7 @@ import logo from "../../assets/cinehub-logo.png";
 const Header = () => {
   return (
     <header className="cine-header">
-      <div className="header-left">
+      <div className="header-left mx-4">
         <img src={logo} className="header-logo" alt="Cine Hub" />
         <h2 className="site-title">Cine Hub</h2>
       </div>
