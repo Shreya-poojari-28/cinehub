@@ -6,6 +6,7 @@ import PrivateRoutes from './PrivateRoutes'
 import Dashboard from '../Components/Dashboard/Dashboard'
 import MovieListPage from '../Components/MovieListPage/MovieListPage '
 import MovieDetails from '../Components/MovieDetails/MovieDetails'
+import Movies from '../Components/Movies/Movies'
 
 const AppRouter = () => {
   return (
@@ -22,6 +23,9 @@ const AppRouter = () => {
         </Route>
         <Route  path="/movie/:id" element={<PrivateRoutes />}>
           <Route index element={<MovieDetails  />} />
+        </Route>
+        <Route  path="/movies" element={<PrivateRoutes />}>
+          <Route index element={<Movies/>} />
         </Route>
       </Routes>
     </BrowserRouter>

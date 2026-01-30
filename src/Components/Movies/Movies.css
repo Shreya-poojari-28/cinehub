@@ -1,0 +1,59 @@
+.image-container {
+    height: 300px;
+    width: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.image-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container {
+    position: relative;
+}
+
+.outer-container {
+    height: 80vh;
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 10px;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.2),
+            transparent);
+    opacity: 0;
+    transition: opacity 0.35s ease-in-out;
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-container-shimmer {
+    height: 300px;
+    width: 500px;
+    background: linear-gradient(90deg,
+            #222 25%,
+            #333 37%,
+            #222 63%);
+    animation: shimmer-effect 1.4s infinite;
+    border-radius: 15px;
+}
+
+@keyframes shimmer-effect {
+    0% {
+        background-position: -200px;
+    }
+
+    100% {
+        background-position: 200px;
+    }
+}
